@@ -1,5 +1,5 @@
 #pragma once
-enum class STATE {ALIVE, DEAD};
+enum class State {ALIVE, DEAD};
 
 class Cell
 {
@@ -7,16 +7,16 @@ public:
 	Cell();
 	~Cell();
 
-	void Init(STATE state);
+	void Init(State State);
 
-	void SetNextState(STATE state);
+	void SetNextState(State State);
 	void GoToNextState();
 
 	//Getters
-	STATE getState() { return _state; }
+	State getState() { return _State; }
 
 private:
-	STATE _state;
-	STATE _nextState;
+	State _State;
+	State _nextState;
 };
 

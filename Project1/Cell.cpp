@@ -2,7 +2,7 @@
 
 
 
-Cell::Cell() : _state(STATE::DEAD)
+Cell::Cell() : _State(State::DEAD)
 {
 }
 
@@ -11,17 +11,17 @@ Cell::~Cell()
 {
 }
 
-void Cell::Init(STATE state)
+void Cell::Init(State State)
 {
-	_state = state;
+	_State = State;
 }
 
-void Cell::SetNextState(STATE state)
+void Cell::SetNextState(State State)
 {
-	_nextState = state;
+	_nextState = State;
 }
 
 void Cell::GoToNextState()
 {
-	_state = _nextState;
+	_State = _nextState;
 }
